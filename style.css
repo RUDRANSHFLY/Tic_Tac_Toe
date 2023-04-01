@@ -14,17 +14,19 @@ h1{
 }
 
 .main{
-    width: 80%;
-    height: 80vh;
+    width: 80vw;
+    height: 85vh;
     background-color: black;
     color : white ;
     margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sub-main{
-    width: 32.9%;
-    height: 32.8%;
-    border: 2px white solid;    
+    width: 25vw;
+    height: 25vh;
+    border: 2px white solid;
+    margin: 0.5%;
 }
