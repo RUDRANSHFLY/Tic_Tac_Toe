@@ -10,24 +10,27 @@ var b8 = document.getElementById("b8");
 var b9 = document.getElementById("b9");
 
 var arr = [b1,b2,b3,b4,b5,b6,b7,b8,b9];
-var st  = [0,0,0,0,0,0,0,0,0];
+var st  = [true,true,true,true,true,true,true,true,true];
 console.log(st);
 console.log(arr);
 var p = 0 ;
 
 for(var i = 0 ; i < arr.length ; i++){
-
+    let ass = st[i] ;
     arr[i].addEventListener("click",function() {
-    console.log(st[i]);
-    if(st[i] === 0){
+    console.log(ass);
+    if(ass == true){
         if(p == 0){
-            alert("Player 1 Your Turn");
+            alert("Player 2 Your Turn");
+            p = 1 ;
         }else{
             alert("Player 1 Your Turn");
+            p = 0 ;
         }    
-        st[i] = 1 ;
+        ass = false ;
     }else{
         alert("Already Done on it");
     }
+    st[i] = ass ;
 });
 }
