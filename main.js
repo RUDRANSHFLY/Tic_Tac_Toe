@@ -16,17 +16,26 @@ console.log(arr);
 var p = 0 ;
 
 for(var i = 0 ; i < arr.length ; i++){
-    let ass = st[i] ;
+    let ass = st[i];
+    let id = arr[i];
     arr[i].addEventListener("click",function() {
-    console.log(ass);
     if(ass == true){
         if(p == 0){
+            const box = document.createElement("div");
+            box.classList.add("circle");
+            id.appendChild(box);
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
+            let url = "./media/multi.jpeg" ;
+            const img = document.createElement("img");
+            img.src = url ;
+            img.classList.add("cross");
+            id.appendChild(img);
             alert("Player 1 Your Turn");
             p = 0 ;
         }    
+
         ass = false ;
     }else{
         alert("Already Done on it");
@@ -34,3 +43,5 @@ for(var i = 0 ; i < arr.length ; i++){
     st[i] = ass ;
 });
 }
+
+
