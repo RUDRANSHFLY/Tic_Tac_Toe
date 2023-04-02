@@ -33,12 +33,12 @@ h1{
 }
 
 .circle{
-    width: 15vw;
+    width: 10vw;
     height: 15vh;
     border: 5px white solid ;
     border-radius: 50%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 
