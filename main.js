@@ -1,3 +1,6 @@
+"use strict";
+
+
 var t = document.getElementsByClassName("sub-main");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2"); 
@@ -25,19 +28,36 @@ console.log(st);
 console.log(arr);
 var p = 0 ;
 
-for(var i = 0 ; i < arr.length ; i++){
+
+
+
+var res =  ['0','0','0','0','0','0','0','0','0','0'];
+
+
+
+for(let i = 0 ; i < arr.length ; i++){
     let ass = st[i];
     let id = arr[i];
+    let c = res[i] ;
+    
     arr[i].addEventListener("click",function() {
+    
     if(ass == true){
+        
         if(p == 0){
+            
+            c = 'o' ;
             touch.play();
             const box = document.createElement("div");
             box.classList.add("circle");
             id.appendChild(box);
+            who_win(i);
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
+
+
+            c = 'X' ;
             touch.play();
             let url = "./media/multi.jpeg" ;
             const img = document.createElement("img");
@@ -47,14 +67,31 @@ for(var i = 0 ; i < arr.length ; i++){
             alert("Player 1 Your Turn");
             p = 0 ;
         }    
-
+        console.log(i);
         ass = false ;
+      
     }else{
         error.play();
         alert("Already Done on it");
     }
+    
+    res[i]  = c ;
     st[i] = ass ;
 });
+
+
+  
+   
+
 }
 
 
+function who_win(i){
+    console.log("Function Called :- ");
+    console.log(i);
+    if(i == 2){
+        if(res[0] == "o" && res[1] == "o"){
+            alert("Player 1 Won");
+        }
+    }
+}
