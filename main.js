@@ -9,6 +9,16 @@ var b7 = document.getElementById("b7");
 var b8 = document.getElementById("b8");
 var b9 = document.getElementById("b9");
 
+
+
+
+// audio files
+
+var touch = new Audio("./media/click.mp3");
+var error = new Audio("./media/error.mp3");
+
+
+
 var arr = [b1,b2,b3,b4,b5,b6,b7,b8,b9];
 var st  = [true,true,true,true,true,true,true,true,true];
 console.log(st);
@@ -21,12 +31,14 @@ for(var i = 0 ; i < arr.length ; i++){
     arr[i].addEventListener("click",function() {
     if(ass == true){
         if(p == 0){
+            touch.play();
             const box = document.createElement("div");
             box.classList.add("circle");
             id.appendChild(box);
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
+            touch.play();
             let url = "./media/multi.jpeg" ;
             const img = document.createElement("img");
             img.src = url ;
@@ -38,6 +50,7 @@ for(var i = 0 ; i < arr.length ; i++){
 
         ass = false ;
     }else{
+        error.play();
         alert("Already Done on it");
     }
     st[i] = ass ;
