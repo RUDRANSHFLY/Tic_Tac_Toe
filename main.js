@@ -50,15 +50,8 @@ for(let i = 0 ; i < arr.length ; i++){
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
-
-
             c = 'X' ;
-            touch.play();
-            let url = "./media/multi.jpeg" ;
-            const img = document.createElement("img");
-            img.src = url ;
-            img.classList.add("cross");
-            id.appendChild(img);
+            addCross(id);
             alert("Player 1 Your Turn");
             p = 0 ;
         }    
@@ -87,6 +80,16 @@ function addCircle(id) {
     box.classList.add("circle");
     id.appendChild(box);
     return;
+}
+
+function addCross(id){
+    touch.play();
+    let url = "./media/multi.jpeg" ;
+    const img = document.createElement("img");
+    img.src = url ;
+    img.classList.add("cross");
+    id.appendChild(img);
+    return
 }
 
 function who_win(i){
