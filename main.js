@@ -47,6 +47,7 @@ for(let i = 0 ; i < arr.length ; i++){
         if(p == 0){
             c = 'o' ;
             addCircle(id);
+            // who_win(i,'X');
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
@@ -92,6 +93,10 @@ function addCross(id){
     return
 }
 
-function who_win(i){
-    
+function who_win(id,play){
+    if(i == 0 || i == 1 || i == 2 ){
+        if(res[0] == play && res[1] == play && res[2]){
+            alert("Player 1 Won");
+        }
+    }
 }
