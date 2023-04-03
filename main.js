@@ -45,13 +45,8 @@ for(let i = 0 ; i < arr.length ; i++){
     if(ass == true){
         
         if(p == 0){
-            
             c = 'o' ;
-            touch.play();
-            const box = document.createElement("div");
-            box.classList.add("circle");
-            id.appendChild(box);
-            who_win(i);
+            addCircle(id);
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
@@ -85,6 +80,14 @@ for(let i = 0 ; i < arr.length ; i++){
 
 }
 
+
+function addCircle(id) {
+    touch.play();
+    const box = document.createElement("div");
+    box.classList.add("circle");
+    id.appendChild(box);
+    return;
+}
 
 function who_win(i){
     console.log("Function Called :- ");
