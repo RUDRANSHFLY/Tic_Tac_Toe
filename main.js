@@ -100,3 +100,10 @@ function who_win(id,play){
         }
     }
 }
+
+
+function reset() {
+
+    // reset to clear the game 
+    
+}
