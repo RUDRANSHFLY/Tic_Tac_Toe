@@ -93,11 +93,5 @@ function addCross(id){
 }
 
 function who_win(i){
-    console.log("Function Called :- ");
-    console.log(i);
-    if(i == 2){
-        if(res[0] == "o" && res[1] == "o"){
-            alert("Player 1 Won");
-        }
-    }
+    
 }
