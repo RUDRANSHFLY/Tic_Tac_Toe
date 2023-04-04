@@ -1,6 +1,8 @@
 "use strict";
 
 
+var h = document.getElementById("won");
+
 var t = document.getElementsByClassName("sub-main");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2"); 
@@ -47,11 +49,13 @@ for(let i = 0 ; i < arr.length ; i++){
         if(p == 0){
             c = 'o' ;
             addCircle(id);
-            // who_win(i,'X');
+            res[i]  = c ;
+            who_win(i,c);
             alert("Player 2 Your Turn");
             p = 1 ;
         }else{
             c = 'X' ;
+            res[i]  = c ;
             addCross(id);
             alert("Player 1 Your Turn");
             p = 0 ;
@@ -64,8 +68,9 @@ for(let i = 0 ; i < arr.length ; i++){
         alert("Already Done on it");
     }
     
-    res[i]  = c ;
+ 
     st[i] = ass ;
+    console.log(res);
 });
 
 
@@ -90,15 +95,18 @@ function addCross(id){
     img.src = url ;
     img.classList.add("cross");
     id.appendChild(img);
-    return
+    return;
 }
 
-function who_win(id,play){
+function who_win(i,play){
+    console.log(i,play);
     if(i == 0 || i == 1 || i == 2 ){
-        if(res[0] == play && res[1] == play && res[2]){
+        if(res[0] == play && res[1] == play && res[2] == play){
+            h.innerText = "Player 1 Won";
             alert("Player 1 Won");
         }
     }
+    return;
 }
 
 
