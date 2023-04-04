@@ -1,6 +1,10 @@
 "use strict";
 
-
+try {
+    
+} catch (e) {  
+    
+}
 var h = document.getElementById("won");
 var div = document.getElementById("le");
 
@@ -30,7 +34,7 @@ var st  = [true,true,true,true,true,true,true,true,true];
 console.log(st);
 console.log(arr);
 var p = 0 ;
-
+var g = false ;
 
 
 
@@ -38,13 +42,18 @@ let res =  ['0','0','0','0','0','0','0','0','0'];
 
 
 
-for(let i = 0 ; i <= arr.length ; i++){
+for(let i = 0 ; i < arr.length ; i++){
     let ass = st[i];
     let id = arr[i];
     let c = res[i] ;
     
-    arr[i].addEventListener("click",function() {
+    id.addEventListener("click",function() {
     
+     if(g == true){
+        alert("The Game is Over");
+        return;
+     }   
+
     if(ass == true){
         
         if(p == 0){
@@ -213,7 +222,7 @@ function who_win(i,play){
 
 
 function who_win_Print(p) {
-
+    g = true ;
     console.log("Printing win player Function Called :-")
     console.log(p);
     if(p == 'o'){
@@ -227,6 +236,6 @@ function who_win_Print(p) {
 
 function reset() {
 
-    // reset to clear the game 
+   
     
 }
