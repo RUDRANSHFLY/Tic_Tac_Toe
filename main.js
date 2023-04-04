@@ -106,16 +106,13 @@ function who_win(i,play){
     if(i == 0 || i == 1 || i == 2 ){
         if(res[0] == play && res[1] == play && res[2] == play){
             // 1ST ROW
-            // le.classList.add(".line");
-            // document.querySelector(".line").style.transform = "translate(8vw, 15vw) rotate(180deg)";
             who_win_Print(play);
         }
-        
-    }else if(i == 0 || i == 3 || i == 6){
+     }else if(i == 0 || i == 3 || i == 6){
             // LEFT-TO-RIGHT CROSS
-            if(res[0] == play && res[3] == play && res[6] == play){
-                who_win_Print(play);
-            }
+        if(res[0] == play && res[3] == play && res[6] == play){
+            who_win_Print(play);
+        }
     }else if(i == 0 || i == 4 || i == 8){
         // 1ST COLUMN 
         if(res[0] == play && res[4] == play && res[8] == play){
@@ -126,16 +123,14 @@ function who_win(i,play){
         if(res[1] == play && res[4] == play && res[7] == play){
             who_win_Print(play); 
         }
-    }
-    else if(i == 3 || i == 4 || i == 5){
+    }else if(i == 3 || i == 4 || i == 5){
         // 2 ND ROW
         if(res[3] == play && res[4] == play && res[5] == play){
             who_win_Print(play); 
         }
-    } else if(i == 6 || i == 7 || i == 8){
+    }else if(i == 6 || i == 7 || i == 8){
         // 3 RD ROW
-        console.log("3 rd column");
-        if(res[6] == play && res[7] == play && res[8] == play){
+        ~if(res[6] == play && res[7] == play && res[8] == play){
             console.log("3 rd column");
             who_win_Print(play); 
         }
