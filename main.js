@@ -57,6 +57,7 @@ for(let i = 0 ; i < arr.length ; i++){
             c = 'X' ;
             res[i]  = c ;
             addCross(id);
+            who_win(i,c);
             alert("Player 1 Your Turn");
             p = 0 ;
         }    
