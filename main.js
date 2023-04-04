@@ -102,11 +102,19 @@ function who_win(i,play){
     console.log(i,play);
     if(i == 0 || i == 1 || i == 2 ){
         if(res[0] == play && res[1] == play && res[2] == play){
-            h.innerText = "Player 1 Won";
-            alert("Player 1 Won");
+            who_win_Print(play);
         }
     }
     return;
+}
+
+
+function who_win_Print(p) {
+    if(p == 'o'){
+        h.innerText = "Player 1 Won";
+    }else{
+        h.innerText = "Player 2 Won";
+    }
 }
 
 
