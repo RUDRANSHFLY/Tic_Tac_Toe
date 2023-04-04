@@ -34,7 +34,7 @@ var p = 0 ;
 
 
 
-var res =  ['0','0','0','0','0','0','0','0','0'];
+let res =  ['0','0','0','0','0','0','0','0','0'];
 
 
 
@@ -101,40 +101,110 @@ function addCross(id){
 }
 
 function who_win(i,play){
-    console.log("WHo_Win Function Called :- ");
-    console.log(i,play);
-    if(i == 0 || i == 1 || i == 2 ){
-        if(res[0] == play && res[1] == play && res[2] == play){
-            // 1ST ROW
-            who_win_Print(play);
-        }
-     }else if(i == 0 || i == 3 || i == 6){
-            // LEFT-TO-RIGHT CROSS
-        if(res[0] == play && res[3] == play && res[6] == play){
-            who_win_Print(play);
-        }
-    }else if(i == 0 || i == 4 || i == 8){
-        // 1ST COLUMN 
-        if(res[0] == play && res[4] == play && res[8] == play){
-            who_win_Print(play);
-        }
-    }else if(i == 1 || i == 4 || i == 7){
-        // 2ND COLUMN
-        if(res[1] == play && res[4] == play && res[7] == play){
-            who_win_Print(play); 
-        }
-    }else if(i == 3 || i == 4 || i == 5){
-        // 2 ND ROW
-        if(res[3] == play && res[4] == play && res[5] == play){
-            who_win_Print(play); 
-        }
-    }else if(i == 6 || i == 7 || i == 8){
-        // 3 RD ROW
-        ~if(res[6] == play && res[7] == play && res[8] == play){
-            console.log("3 rd column");
-            who_win_Print(play); 
-        }
+    
+
+
+    switch (i) {
+        case 0:
+            if(res[0] == play && res[1] == play && res[2] == play){
+               who_win_Print(play);
+            }
+            if(res[0] == play && res[3] == play && res[6] == play){
+                who_win_Print(play);
+            }
+            if(res[0] == play && res[4] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            break;
+
+        case 1:
+            if(res[0] == play && res[1] == play && res[2] == play){
+                who_win_Print(play);
+            }
+            if(res[1] == play && res[4] == play && res[7] == play){
+                who_win_Print(play);
+            }
+            break;
+
+        case 2:
+            if(res[0] == play && res[1] == play && res[2] == play){
+                who_win_Print(play);
+            }
+            if(res[2] == play && res[5] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[2] == play && res[4] == play && res[6] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 3:
+            if(res[0] == play && res[3] == play && res[6] == play){
+                who_win_Print(play);
+            }
+            if(res[3] == play && res[4] == play && res[5] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 4:
+            if(res[1] == play && res[4] == play && res[7] == play){
+                who_win_Print(play);
+            }
+            if(res[0] == play && res[4] == play && res[3] == play){
+                who_win_Print(play);
+            }
+            if(res[2] == play && res[4] == play && res[6] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 5:
+            if(res[2] == play && res[5] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[3] == play && res[4] == play && res[5] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 6:
+            if(res[0] == play && res[3] == play && res[6] == play){
+                who_win_Print(play);
+            }
+            if(res[6] == play && res[7] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[6] == play && res[4] == play && res[2] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 7:
+            if(res[6] == play && res[7] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[1] == play && res[4] == play && res[7] == play){
+                who_win_Print(play);
+            }
+        break ;
+
+        case 8:
+            if(res[6] == play && res[7] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[2] == play && res[5] == play && res[8] == play){
+                who_win_Print(play);
+            }
+            if(res[0] == play && res[4] == play && res[8] == play){
+                who_win_Print(play);
+            }
+        break ;
+        default:
+            break;
     }
+
+
 
 
 
@@ -143,6 +213,7 @@ function who_win(i,play){
 
 
 function who_win_Print(p) {
+
     console.log("Printing win player Function Called :-")
     console.log(p);
     if(p == 'o'){
