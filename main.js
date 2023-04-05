@@ -256,5 +256,7 @@ function game_is_over() {
 function add_win_Style( j , k , l) {
     console.log("Add win Style")
     div.classList.add("line");
-    
+    if( j == 0 && k == 1 && l == 2){
+        div.style.transform = "translate(9% , 12vh)";
+    }
 }
