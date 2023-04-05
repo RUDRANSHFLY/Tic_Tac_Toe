@@ -122,6 +122,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[0] == play && res[3] == play && res[6] == play){
+                add_win_Style(0,3,6);
                 who_win_Print(play);
             }
             if(res[0] == play && res[4] == play && res[8] == play){
@@ -254,9 +255,24 @@ function game_is_over() {
 }
 
 function add_win_Style( j , k , l) {
-    console.log("Add win Style")
+    console.log("Add win Style");
     div.classList.add("line");
-    if( j == 0 && k == 1 && l == 2){
-        div.style.transform = "translate(9% , 12vh)";
+    switch (j) {
+        case 0:
+            if( j == 0 && k == 1 && l == 2){
+                div.style.transform = "translate(9% , 12vh)";
+            }
+            if( j == 0 && k == 3 && l == 6){
+                console.log("1 ST COLUMN");
+                div.style.width = "80%";
+                div.style.transform = "rotate(90deg) translate(50% ,23vh)";
+            }
+            
+            break;
+    
+        default:
+            break;
     }
+   
+    
 }
