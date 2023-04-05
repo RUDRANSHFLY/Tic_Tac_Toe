@@ -126,6 +126,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[0] == play && res[4] == play && res[8] == play){
+                add_win_Style(0,4,8);
                 who_win_Print(play);
             }
             break;
@@ -135,6 +136,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[1] == play && res[4] == play && res[7] == play){
+                add_win_Style(1,4,7);
                 who_win_Print(play);
             }
             break;
@@ -267,8 +269,29 @@ function add_win_Style( j , k , l) {
                 div.style.width = "80%";
                 div.style.transform = "rotate(90deg) translate(50% ,23vh)";
             }
-            
-            break;
+            if( j == 0 && k == 4 && l == 8){
+                console.log("LEFT-RIGHT CROSS JOIN");
+                div.style.width = "100%";
+                div.style.transform = "rotate(40deg) translate(29% ,31vh)";
+            }
+        break;
+
+        case 1:
+            if( j == 0 && k == 1 && l == 2){
+                div.style.transform = "translate(9% , 12vh)";
+            }
+            if( j == 1 && k == 4 && l == 7){
+                console.log("2 ND COLUMN");
+                div.style.width = "90vw";
+                div.style.transform = "rotate(90deg) translate(41vw ,21vh)";
+            }
+            if( j == 0 && k == 4 && l == 8){
+                console.log("LEFT-RIGHT CROSS JOIN");
+                div.style.width = "100%";
+                div.style.transform = "rotate(40deg) translate(29% ,31vh)";
+            }
+        break;
+
     
         default:
             break;
