@@ -50,6 +50,7 @@ for(let i = 0 ; i < arr.length ; i++){
     id.addEventListener("click",function() {
     
      if(g == true){
+        game_is_over();
         alert("The Game is Over");
         return;
      }   
@@ -109,6 +110,7 @@ function addCross(id){
     return;
 }
 
+
 function who_win(i,play){
     
 
@@ -116,7 +118,8 @@ function who_win(i,play){
     switch (i) {
         case 0:
             if(res[0] == play && res[1] == play && res[2] == play){
-               who_win_Print(play);
+                add_win_Style(0,1,2);
+                who_win_Print(play);
             }
             if(res[0] == play && res[3] == play && res[6] == play){
                 who_win_Print(play);
@@ -237,5 +240,21 @@ function who_win_Print(p) {
 function reset() {
 
    
+    
+}
+
+function game_is_over() {
+   
+   
+    var b = document.querySelector("body");
+    b.classList.add("img");
+    const r = document.getElementById("a");
+    r.remove();
+    return;
+}
+
+function add_win_Style( j , k , l) {
+    console.log("Add win Style")
+    div.classList.add("line");
     
 }
