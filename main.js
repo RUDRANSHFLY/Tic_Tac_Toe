@@ -162,6 +162,7 @@ function who_win(i,play){
 
         case 3:
             if(res[0] == play && res[3] == play && res[6] == play){
+                add_win_Style(3,0,6);
                 who_win_Print(play);
             }
             if(res[3] == play && res[4] == play && res[5] == play){
@@ -322,6 +323,12 @@ function add_win_Style( j , k , l) {
                 return;
             }
 
+            if( j == 3 && k == 0 && l == 6){
+                console.log("1 ST COLUMN");
+                div.style.width = "80%";
+                div.style.transform = "rotate(90deg) translate(50% ,23vh)";
+            }
+        break;    
 
         default:
             break;
