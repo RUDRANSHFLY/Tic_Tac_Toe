@@ -165,6 +165,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[3] == play && res[4] == play && res[5] == play){
+                add_win_Style(3,4,5);
                 who_win_Print(play);
             }
         break ;
@@ -312,10 +313,15 @@ function add_win_Style( j , k , l) {
                 div.style.width = "80vw";
                 div.style.transform = "rotate(140deg) translate(20vw ,-25vw)";
             }
-            
-
-
         break;
+
+        case 3:
+            if(j == 3 && k == 4 && l == 5){
+                console.log("2 ND ROW");
+                div.style.transform = "translate(9% , 42vh)";
+                return;
+            }
+
 
         default:
             break;
