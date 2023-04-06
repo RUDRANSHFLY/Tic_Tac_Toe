@@ -143,6 +143,7 @@ function who_win(i,play){
 
         case 2:
             if(res[0] == play && res[1] == play && res[2] == play){
+                add_win_Style(2,1,0);
                 who_win_Print(play);
             }
             if(res[2] == play && res[5] == play && res[8] == play){
@@ -150,6 +151,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[2] == play && res[4] == play && res[6] == play){
+                add_win_Style(2,4,6);
                 who_win_Print(play);
             }
         break ;
@@ -294,11 +296,24 @@ function add_win_Style( j , k , l) {
         break;
 
         case 2:
+            if( j == 2 && k == 1 && l == 0){
+                console.log("1st row");
+                div.style.transform = "translate(9% , 12vh)";
+                return;
+            }
             if(j == 2 && k == 5 && l == 8){
                 console.log("3 RD COLUMN");
                 div.style.width = "60vw";
                 div.style.transform = "rotate(90deg) translate(34vw ,-37vw)";
+                return;
+            }    
+            if(j == 2 && k == 4 && l == 6){
+                console.log("RIGHT TO LEFT CROSS ");
+                div.style.width = "80vw";
+                div.style.transform = "rotate(140deg) translate(20vw ,-25vw)";
             }
+            
+
 
         break;
 
