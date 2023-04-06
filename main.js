@@ -118,14 +118,17 @@ function who_win(i,play){
     switch (i) {
         case 0:
             if(res[0] == play && res[1] == play && res[2] == play){
+                console.log("1 st row");
                 add_win_Style(0,1,2);
                 who_win_Print(play);
             }
             if(res[0] == play && res[3] == play && res[6] == play){
+                console.log("1 st column");
                 add_win_Style(0,3,6);
                 who_win_Print(play);
             }
             if(res[0] == play && res[4] == play && res[8] == play){
+                console.log("LEFT - TO - RIGHT CROSS");
                 add_win_Style(0,4,8);
                 who_win_Print(play);
             }
