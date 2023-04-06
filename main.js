@@ -133,6 +133,7 @@ function who_win(i,play){
 
         case 1:
             if(res[0] == play && res[1] == play && res[2] == play){
+                add_win_Style(0,1,2);
                 who_win_Print(play);
             }
             if(res[1] == play && res[4] == play && res[7] == play){
@@ -281,17 +282,13 @@ function add_win_Style( j , k , l) {
 
         case 1:
             if( j == 0 && k == 1 && l == 2){
+                console.log("1st row");
                 div.style.transform = "translate(9% , 12vh)";
             }
             if( j == 1 && k == 4 && l == 7){
                 console.log("2 ND COLUMN");
                 div.style.width = "60vw";
                 div.style.transform = "rotate(90deg) translate(34vw ,-12vh)";
-            }
-            if( j == 0 && k == 4 && l == 8){
-                console.log("LEFT-RIGHT CROSS JOIN");
-                div.style.width = "100%";
-                div.style.transform = "rotate(40deg) translate(29% ,31vh)";
             }
         break;
 
