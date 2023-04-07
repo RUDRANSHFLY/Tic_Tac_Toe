@@ -175,10 +175,13 @@ function who_win(i,play){
             if(res[1] == play && res[4] == play && res[7] == play){
                 who_win_Print(play);
             }
-            if(res[0] == play && res[4] == play && res[3] == play){
+            if(res[0] == play && res[4] == play && res[8] == play){
                 who_win_Print(play);
             }
             if(res[2] == play && res[4] == play && res[6] == play){
+                who_win_Print(play);
+            }
+            if(res[3] == play && res[4] == play && res[5] == play){
                 who_win_Print(play);
             }
         break ;
@@ -319,7 +322,7 @@ function add_win_Style( j , k , l) {
         case 3:
             if(j == 3 && k == 4 && l == 5){
                 console.log("2 ND ROW");
-                div.style.transform = "translate(9% , 42vh)";
+                div.style.transform = "translate(9% , 40vh)";
                 return;
             }
 
@@ -328,7 +331,11 @@ function add_win_Style( j , k , l) {
                 div.style.width = "80%";
                 div.style.transform = "rotate(90deg) translate(50% ,23vh)";
             }
-        break;    
+        break;
+        
+        case 4 :
+        
+        break;
 
         default:
             break;
