@@ -173,6 +173,7 @@ function who_win(i,play){
 
         case 4:
             if(res[1] == play && res[4] == play && res[7] == play){
+                add_win_Style(4,1,7);
                 who_win_Print(play);
             }
             if(res[0] == play && res[4] == play && res[8] == play){
@@ -339,6 +340,12 @@ function add_win_Style( j , k , l) {
                 console.log("2 ND ROW");
                 div.style.transform = "translate(9% , 40vh)";
                 return;
+            }
+
+            if(j == 4 && k == 1 && l == 7){
+                console.log("2 ND COLUMN");
+                div.style.width = "60vw";
+                div.style.transform = "rotate(90deg) translate(34vw ,-12vh)";
             }
             
         
