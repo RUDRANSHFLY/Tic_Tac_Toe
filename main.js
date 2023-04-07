@@ -182,6 +182,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[3] == play && res[4] == play && res[5] == play){
+                add_win_Style(4,3,5);
                 who_win_Print(play);
             }
         break ;
@@ -334,6 +335,12 @@ function add_win_Style( j , k , l) {
         break;
         
         case 4 :
+            if(j == 4 && k == 3 && l == 5){
+                console.log("2 ND ROW");
+                div.style.transform = "translate(9% , 40vh)";
+                return;
+            }
+            
         
         break;
 
