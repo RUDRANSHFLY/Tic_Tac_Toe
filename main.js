@@ -181,6 +181,7 @@ function who_win(i,play){
                 who_win_Print(play);
             }
             if(res[2] == play && res[4] == play && res[6] == play){
+                add_win_Style(4,2,6);
                 who_win_Print(play);
             }
             if(res[3] == play && res[4] == play && res[5] == play){
@@ -355,6 +356,11 @@ function add_win_Style( j , k , l) {
                 div.style.transform = "rotate(40deg) translate(29% ,31vh)";
             }
             
+            if(j == 4 && k == 2 && l == 6){
+                console.log("RIGHT TO LEFT CROSS ");
+                div.style.width = "80vw";
+                div.style.transform = "rotate(140deg) translate(20vw ,-25vw)";
+            }
         
         break;
 
